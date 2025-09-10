@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>二人で遊べる 囲碁</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>二人で遊べる 囲碁</h1>
+    <div class="controls">
+      <label>盤サイズ:
+        <select id="boardSize">
+          <option value="9">9路</option>
+          <option value="13">13路</option>
+          <option value="19" selected>19路</option>
+        </select>
+      </label>
+      <button id="newGame">新規対局</button>
+      <button id="undoMove">一手戻す</button>
+      <button id="passMove">パス</button>
+      <button id="toggleCoords">座標表示 切替</button>
+      <button id="estimateScore">地合い推定</button>
+    </div>
+
+    <div class="status">
+      <span id="turn">手番: 黒</span>
+      <span id="captures">黒アゲハマ: 0 / 白アゲハマ: 0</span>
+      <span id="passes">連続パス: 0</span>
+    </div>
+
+    <div class="board-wrap">
+      <canvas id="board" width="760" height="760" aria-label="囲碁盤" role="img"></canvas>
+    </div>
+
+    <div class="footer">
+      <p>操作: クリックで着手、パスで連続2回になると終局。終局後は「地合い推定」で簡易計算。</p>
+      <p>ルール: 日本式に近い簡易実装(自殺手禁止、単純コウ禁止、終局後の地の推定は簡易アルゴリズム)。</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+#app { max-width: 900px; margin: 0 auto; padding: 16px; }
+
+h1 { font-size: 22px; margin: 8px 0 16px; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.controls button, .controls select {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.status { display: flex; gap: 16px; margin-bottom: 8px; font-size: 14px; }
+
+.board-wrap { background: #d8c089; border: 1px solid #b99b5c; padding: 8px; border-radius: 6px; box-shadow: inset 0 0 40px rgba(0,0,0,0.08); }
+#board { width: 100%; height: auto; display: block; image-rendering: crisp-edges; }
+
+.footer { font-size: 12px; color: #555; margin-top: 10px; }
+
+.badge { display: inline-block; padding: 2px 6px; border-radius: 4px; background: #eee; margin-left: 6px; }
+
+/* 石の影用 */
+.canvas-shadow { filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.35)); }
